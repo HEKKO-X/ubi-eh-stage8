@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "project_id": "EH-A4-PORTABLE",
+  "variant": "D1",
+  "candidate_binding": "64a5d0f18dd28c4ed27a",
+  "assigned_pack": {
+    "file_name": "ethical-hacking-stage-8-shared-b2.tar.gz",
+    "sha256": "4ac1ab88fe48f8c7fed84ebda5f78a96986b3f1366b824d2b84d3ad706bc0011",
+    "manifest_signature": "edffa5e4eccb4b7e8ab7d064628c16a0fe8a0cba219ae107a4ee0074cd699a62",
+    "verified_before_use": true
+  },
+  "commit": "78397ffb756a77b7e5340bb6cc90a962503165e2",
+  "supported_environment": {
+    "os": "Kali GNU/Linux Rolling",
+    "cpu": "x86_64",
+    "memory_gb": 16,
+    "tool_versions": {
+      "python3": "3.13.3"
+    }
+  },
+  "commands": {
+    "provision": "python3 evidence/lab-source/portable_range.py build --assignment candidate.json --out ad-range --force",
+    "build": "python3 evidence/lab-source/portable_range.py health --root ad-range",
+    "test": "python3 enumeration/discover.py ad-range/source-records.json <foothold-user> && python3 automation/path1_automation.py evidence/lab-source/portable_range.py candidate.json ad-range && python3 automation/path2_automation.py evidence/lab-source/portable_range.py candidate.json ad-range && python3 remediation/remediation_test.py evidence/lab-source/portable_range.py candidate.json ad-range && for f in detections/fixtures/*.jsonl; do python3 detections/detect.py \"$f\"; done",
+    "clean": "python3 evidence/lab-source/portable_range.py act --assignment candidate.json --root ad-range cleanup"
+  },
+  "results": {
+    "public_tests": {
+      "passed": 8,
+      "failed": 0,
+      "report": "evidence/all-artifact-hashes.txt"
+    },
+    "runtime_seconds": 0,
+    "peak_memory_mb": 0,
+    "output_hashes": {
+      "enumeration/discovery-output.json": "03b56af72871fb10111fa00df6ffac1c4f4958a29dfca7c81f7e3ff211a198f4",
+      "automation/path1-run-log.json": "3849b1946364dbf57e02334c6a48bddcaeaa5ceec656157176ab027f64db4338",
+      "automation/path2-run-log.json": "2d71e98f4b76ceb1447b93610c82192870f6f7f2c148dcd568cae4b2a90be19a",
+      "remediation/remediation-run-log.json": "7a168c9c80bec219a494e05cb854336a0dd5d8189c645a25009b177f9b2fe66a"
+    }
+  },
+  "inputs": [
+    "candidate.json",
+    "evidence/lab-source/portable_range.py"
+  ],
+  "outputs": [
+    "enumeration/discovery-output.json",
+    "automation/path1-run-log.json",
+    "automation/path2-run-log.json",
+    "remediation/remediation-run-log.json",
+    "detections/detection-test-results.txt"
+  ],
+  "manual_preconditions": [
+    "candidate.json must be present at repo root (git-ignored, provided separately, not committed)."
+  ],
+  "known_limitations": [
+    "events.jsonl resets on every build --force call, so it only reflects the most recent build cycle - not cumulative history across separate runs.",
+    "runtime_seconds and peak_memory_mb were not formally profiled - manual timing showed each phase completing in well under 1 minute on the supported environment.",
+    "None outstanding regarding pack signature - B2 manifest_signature confirmed against the Private Assignment Overlay dashboard page (edffa5e4eccb4b7e8ab7d064628c16a0fe8a0cba219ae107a4ee0074cd699a62), matching the independently-verified archive SHA-256 exactly."
+  ]
+}
