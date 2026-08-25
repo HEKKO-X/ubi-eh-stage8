@@ -21,7 +21,7 @@
   "commands": {
     "provision": "python3 evidence/lab-source/portable_range.py build --assignment candidate.json --out ad-range --force",
     "build": "python3 evidence/lab-source/portable_range.py health --root ad-range",
-    "test": "python3 enumeration/discover.py ad-range/source-records.json <foothold-user> && python3 automation/path1_automation.py evidence/lab-source/portable_range.py candidate.json ad-range && python3 automation/path2_automation.py evidence/lab-source/portable_range.py candidate.json ad-range && python3 remediation/remediation_test.py evidence/lab-source/portable_range.py candidate.json ad-range && for f in detections/fixtures/*.jsonl; do python3 detections/detect.py \"$f\"; done",
+    "test": "python3 tests/run_all.py",
     "clean": "python3 evidence/lab-source/portable_range.py act --assignment candidate.json --root ad-range cleanup"
   },
   "results": {

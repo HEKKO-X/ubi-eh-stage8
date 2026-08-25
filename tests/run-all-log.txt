@@ -1,0 +1,458 @@
+{"status": "ready", "variant": "D1", "marker": "UBI-A8-D426CF231FB6"}
+{
+  "checks": {
+    "binding_present": true,
+    "candidate_present": true,
+    "marker_present": true,
+    "proof_objects_present": true,
+    "service_present": true,
+    "stale_edge_present": true
+  },
+  "healthy": true
+}
+{
+  "marker": "UBI-A8-D426CF231FB6",
+  "foothold": "candidate-b6214a7d",
+  "reachable_objects": [
+    "Archive Operators",
+    "FILE01",
+    "archive-primary",
+    "archive-secondary",
+    "candidate-b6214a7d",
+    "svc-archive-b6214a7d"
+  ],
+  "edges_classified": [
+    {
+      "edge": "WriteSPN",
+      "source": "candidate-b6214a7d",
+      "source_record": "ACL-01",
+      "target": "svc-archive-b6214a7d",
+      "source_reachable": true,
+      "valid": true,
+      "reason": "valid"
+    },
+    {
+      "edge": "GenericAll",
+      "source": "candidate-b6214a7d",
+      "source_record": "ACL-02",
+      "target": "Archive Operators",
+      "source_reachable": true,
+      "valid": true,
+      "reason": "valid"
+    },
+    {
+      "edge": "GenericAll",
+      "source": "candidate-b6214a7d",
+      "source_record": "STALE-01",
+      "stale": true,
+      "target": "deleted-group",
+      "source_reachable": true,
+      "valid": false,
+      "reason": "marked_stale"
+    },
+    {
+      "edge": "CanAuthenticate",
+      "source": "svc-archive-b6214a7d",
+      "source_record": "AUTH-01",
+      "target": "FILE01",
+      "source_reachable": true,
+      "valid": true,
+      "reason": "valid"
+    },
+    {
+      "edge": "ReadProof",
+      "source": "svc-archive-b6214a7d",
+      "source_record": "FILE-ACL-01",
+      "target": "archive-primary",
+      "source_reachable": true,
+      "valid": true,
+      "reason": "valid"
+    },
+    {
+      "edge": "MemberOf",
+      "source": "svc-archive-b6214a7d",
+      "source_record": "MEMBER-01",
+      "target": "Service Accounts",
+      "source_reachable": true,
+      "valid": false,
+      "reason": "target_object_missing"
+    },
+    {
+      "edge": "ReadProof",
+      "source": "Archive Operators",
+      "source_record": "FILE-ACL-02",
+      "target": "archive-secondary",
+      "source_reachable": true,
+      "valid": true,
+      "reason": "valid"
+    },
+    {
+      "edge": "RemoteInteractiveLogon",
+      "source": "Archive Operators",
+      "source_record": "RIGHT-01",
+      "target": "FILE01",
+      "source_reachable": true,
+      "valid": true,
+      "reason": "valid"
+    },
+    {
+      "edge": "AdminTo",
+      "source": "Directory Administrators",
+      "source_record": "LOCAL-01",
+      "target": "FILE01",
+      "source_reachable": false,
+      "valid": false,
+      "reason": "source_unreachable"
+    }
+  ],
+  "discovered_paths": {
+    "archive-primary": [
+      {
+        "source": "candidate-b6214a7d",
+        "edge": "WriteSPN",
+        "target": "svc-archive-b6214a7d"
+      },
+      {
+        "source": "svc-archive-b6214a7d",
+        "edge": "ReadProof",
+        "target": "archive-primary"
+      }
+    ],
+    "archive-secondary": [
+      {
+        "source": "candidate-b6214a7d",
+        "edge": "GenericAll",
+        "target": "Archive Operators"
+      },
+      {
+        "source": "Archive Operators",
+        "edge": "ReadProof",
+        "target": "archive-secondary"
+      }
+    ]
+  }
+}
+
+=== PATH 1 SUMMARY: PASS (3/3 clean runs) ===
+  attempt 1: set-spnOK -> request-service-tokenOK -> read-proof-1OK
+  attempt 2: set-spnOK -> request-service-tokenOK -> read-proof-1OK
+  attempt 3: set-spnOK -> request-service-tokenOK -> read-proof-1OK
+
+{
+  "path": "path_1",
+  "attempts_total": 3,
+  "attempts_succeeded": 3,
+  "three_of_three": true,
+  "attempts": [
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "set-spn",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "request-service-token",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-1",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 1
+    },
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "set-spn",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "request-service-token",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-1",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 2
+    },
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "set-spn",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "request-service-token",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-1",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 3
+    }
+  ]
+}
+
+=== PATH 2 SUMMARY: PASS (3/3 clean runs) ===
+  attempt 1: add-group-memberOK -> read-proof-2OK
+  attempt 2: add-group-memberOK -> read-proof-2OK
+  attempt 3: add-group-memberOK -> read-proof-2OK
+
+{
+  "path": "path_2",
+  "attempts_total": 3,
+  "attempts_succeeded": 3,
+  "three_of_three": true,
+  "attempts": [
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "add-group-member",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-2",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 1
+    },
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "add-group-member",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-2",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 2
+    },
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "add-group-member",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-2",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 3
+    }
+  ]
+}
+
+=== REMEDIATION TEST SUMMARY ===
+  path_1: PASS
+    baseline attack worked (pre-fix): True
+    remediation applied: True
+    blocked correctly (post-fix): True
+    health still green: True
+  path_2: PASS
+    baseline attack worked (pre-fix): True
+    remediation applied: True
+    blocked correctly (post-fix): True
+    health still green: True
+
+{
+  "path_1": {
+    "path": "path_1",
+    "baseline_attack_worked": true,
+    "remediation_applied": true,
+    "post_remediation_blocked_correctly": true,
+    "post_remediation_first_result": {
+      "ok": false,
+      "operation": "set-spn",
+      "exit_code": 2
+    },
+    "health_after_remediation": true,
+    "pass": true
+  },
+  "path_2": {
+    "path": "path_2",
+    "baseline_attack_worked": true,
+    "remediation_applied": true,
+    "post_remediation_blocked_correctly": true,
+    "post_remediation_first_result": {
+      "ok": false,
+      "operation": "add-group-member",
+      "exit_code": 2
+    },
+    "health_after_remediation": true,
+    "pass": true
+  }
+}
+{
+  "source_file": "/home/Hekko/eh-stage8/detections/fixtures/benign-group-admin.jsonl",
+  "detections": [
+    {
+      "rule": "spn_abuse_chain",
+      "alert": false,
+      "evidence": []
+    },
+    {
+      "rule": "group_selfadd_chain",
+      "alert": false,
+      "evidence": []
+    }
+  ]
+}
+{
+  "source_file": "/home/Hekko/eh-stage8/detections/fixtures/benign-spn-rotation.jsonl",
+  "detections": [
+    {
+      "rule": "spn_abuse_chain",
+      "alert": false,
+      "evidence": []
+    },
+    {
+      "rule": "group_selfadd_chain",
+      "alert": false,
+      "evidence": []
+    }
+  ]
+}
+{
+  "source_file": "/home/Hekko/eh-stage8/detections/fixtures/positive-group-selfadd.jsonl",
+  "detections": [
+    {
+      "rule": "spn_abuse_chain",
+      "alert": false,
+      "evidence": []
+    },
+    {
+      "rule": "group_selfadd_chain",
+      "alert": true,
+      "actor": "candidate-b6214a7d",
+      "evidence": [
+        "add-group-member",
+        "read-proof-2"
+      ]
+    }
+  ]
+}
+{
+  "source_file": "/home/Hekko/eh-stage8/detections/fixtures/positive-spn-abuse.jsonl",
+  "detections": [
+    {
+      "rule": "spn_abuse_chain",
+      "alert": true,
+      "actor": "candidate-b6214a7d",
+      "evidence": [
+        "set-spn",
+        "request-service-token",
+        "read-proof-1"
+      ]
+    },
+    {
+      "rule": "group_selfadd_chain",
+      "alert": false,
+      "evidence": []
+    }
+  ]
+}
+
+--- Build clean range ---
+--- Build clean range: PASS ---
+
+--- Health check ---
+--- Health check: PASS ---
+
+--- Enumeration / discovery ---
+--- Enumeration / discovery: PASS ---
+
+--- Path 1 automation (3x) ---
+--- Path 1 automation (3x): PASS ---
+
+--- Path 2 automation (3x) ---
+--- Path 2 automation (3x): PASS ---
+
+--- Remediation verification ---
+--- Remediation verification: PASS ---
+
+--- Detection fixture: benign-group-admin.jsonl ---
+--- Detection fixture: benign-group-admin.jsonl: PASS ---
+
+--- Detection fixture: benign-spn-rotation.jsonl ---
+--- Detection fixture: benign-spn-rotation.jsonl: PASS ---
+
+--- Detection fixture: positive-group-selfadd.jsonl ---
+--- Detection fixture: positive-group-selfadd.jsonl: PASS ---
+
+--- Detection fixture: positive-spn-abuse.jsonl ---
+--- Detection fixture: positive-spn-abuse.jsonl: PASS ---
+
+=== FINAL TEST SUMMARY ===
+  build: PASS
+  health: PASS
+  enumeration: PASS
+  path1: PASS
+  path2: PASS
+  remediation: PASS
+  detection_fixtures: PASS
