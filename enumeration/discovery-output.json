@@ -1,0 +1,122 @@
+{
+  "marker": "UBI-A8-D426CF231FB6",
+  "foothold": "candidate-b6214a7d",
+  "reachable_objects": [
+    "Archive Operators",
+    "FILE01",
+    "archive-primary",
+    "archive-secondary",
+    "candidate-b6214a7d",
+    "svc-archive-b6214a7d"
+  ],
+  "edges_classified": [
+    {
+      "edge": "WriteSPN",
+      "source": "candidate-b6214a7d",
+      "source_record": "ACL-01",
+      "target": "svc-archive-b6214a7d",
+      "source_reachable": true,
+      "valid": true,
+      "reason": "valid"
+    },
+    {
+      "edge": "GenericAll",
+      "source": "candidate-b6214a7d",
+      "source_record": "ACL-02",
+      "target": "Archive Operators",
+      "source_reachable": true,
+      "valid": true,
+      "reason": "valid"
+    },
+    {
+      "edge": "GenericAll",
+      "source": "candidate-b6214a7d",
+      "source_record": "STALE-01",
+      "stale": true,
+      "target": "deleted-group",
+      "source_reachable": true,
+      "valid": false,
+      "reason": "marked_stale"
+    },
+    {
+      "edge": "CanAuthenticate",
+      "source": "svc-archive-b6214a7d",
+      "source_record": "AUTH-01",
+      "target": "FILE01",
+      "source_reachable": true,
+      "valid": true,
+      "reason": "valid"
+    },
+    {
+      "edge": "ReadProof",
+      "source": "svc-archive-b6214a7d",
+      "source_record": "FILE-ACL-01",
+      "target": "archive-primary",
+      "source_reachable": true,
+      "valid": true,
+      "reason": "valid"
+    },
+    {
+      "edge": "MemberOf",
+      "source": "svc-archive-b6214a7d",
+      "source_record": "MEMBER-01",
+      "target": "Service Accounts",
+      "source_reachable": true,
+      "valid": false,
+      "reason": "target_object_missing"
+    },
+    {
+      "edge": "ReadProof",
+      "source": "Archive Operators",
+      "source_record": "FILE-ACL-02",
+      "target": "archive-secondary",
+      "source_reachable": true,
+      "valid": true,
+      "reason": "valid"
+    },
+    {
+      "edge": "RemoteInteractiveLogon",
+      "source": "Archive Operators",
+      "source_record": "RIGHT-01",
+      "target": "FILE01",
+      "source_reachable": true,
+      "valid": true,
+      "reason": "valid"
+    },
+    {
+      "edge": "AdminTo",
+      "source": "Directory Administrators",
+      "source_record": "LOCAL-01",
+      "target": "FILE01",
+      "source_reachable": false,
+      "valid": false,
+      "reason": "source_unreachable"
+    }
+  ],
+  "discovered_paths": {
+    "archive-primary": [
+      {
+        "source": "candidate-b6214a7d",
+        "edge": "WriteSPN",
+        "target": "svc-archive-b6214a7d"
+      },
+      {
+        "source": "svc-archive-b6214a7d",
+        "edge": "ReadProof",
+        "target": "archive-primary"
+      }
+    ],
+    "archive-secondary": [
+      {
+        "source": "candidate-b6214a7d",
+        "edge": "GenericAll",
+        "target": "Archive Operators"
+      },
+      {
+        "source": "Archive Operators",
+        "edge": "ReadProof",
+        "target": "archive-secondary"
+      }
+    ]
+  }
+}

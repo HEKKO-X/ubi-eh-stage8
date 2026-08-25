@@ -1,0 +1,2 @@
+4ac1ab88fe48f8c7fed84ebda5f78a96986b3f1366b824d2b84d3ad706bc0011  ethical-hacking-stage-8-shared-b2.tar.gz
+9c7407048d0a19a86dbc1378e038730008d186d13dda27b18ad40b404a1f0390  candidate.json

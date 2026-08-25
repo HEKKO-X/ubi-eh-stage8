@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "tests": [
+    { "id": "EDGE-GROUP", "edge": "MemberOf", "observed": true, "expected": "valid" },
+    { "id": "EDGE-ACL", "edge": "GenericAll", "observed": true, "target_exists": true, "expected": "valid" },
+    { "id": "EDGE-STALE", "edge": "GenericAll", "observed": false, "target_exists": false, "expected": "reject" },
+    { "id": "EDGE-DELEGATION", "edge": "AllowedToDelegate", "spn_exists": true, "expected": "valid" },
+    { "id": "EDGE-DISABLED", "edge": "HasSession", "account_enabled": false, "expected": "reject" },
+    { "id": "DYNAMIC-SID", "input_sid": "S-1-5-21-CHANGED", "expected": "discover_not_embed" },
+    { "id": "CLEANUP-OBJECT", "postcondition": { "temporary_objects": 0 }, "expected": "pass" },
+    { "id": "PATCH-PATH-1", "state": "remediated", "expected": "blocked_at_selected_edge" },
+    { "id": "DETECTION-POSITIVE", "fixture": "acl_abuse", "expected": "alert" },
+    { "id": "DETECTION-BENIGN", "fixture": "approved_acl_admin", "expected": "no_alert" }
+  ]
+}

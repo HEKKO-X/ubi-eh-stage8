@@ -1,0 +1,285 @@
+
+=== PATH 1 SUMMARY: PASS (3/3 clean runs) ===
+  attempt 1: set-spnOK -> request-service-tokenOK -> read-proof-1OK
+  attempt 2: set-spnOK -> request-service-tokenOK -> read-proof-1OK
+  attempt 3: set-spnOK -> request-service-tokenOK -> read-proof-1OK
+
+{
+  "path": "path_1",
+  "attempts_total": 3,
+  "attempts_succeeded": 3,
+  "three_of_three": true,
+  "attempts": [
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "set-spn",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "request-service-token",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-1",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 1
+    },
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "set-spn",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "request-service-token",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-1",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 2
+    },
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "set-spn",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "request-service-token",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-1",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 3
+    }
+  ]
+}
+
+=== PATH 1 SUMMARY: PASS (3/3 clean runs) ===
+  attempt 1: set-spnOK -> request-service-tokenOK -> read-proof-1OK
+  attempt 2: set-spnOK -> request-service-tokenOK -> read-proof-1OK
+  attempt 3: set-spnOK -> request-service-tokenOK -> read-proof-1OK
+
+{
+  "path": "path_1",
+  "attempts_total": 3,
+  "attempts_succeeded": 3,
+  "three_of_three": true,
+  "attempts": [
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "set-spn",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "request-service-token",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-1",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 1
+    },
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "set-spn",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "request-service-token",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-1",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 2
+    },
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "set-spn",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "request-service-token",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-1",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 3
+    }
+  ]
+}
+
+=== PATH 1 SUMMARY: PASS (3/3 clean runs) ===
+  attempt 1: set-spnOK -> request-service-tokenOK -> read-proof-1OK
+  attempt 2: set-spnOK -> request-service-tokenOK -> read-proof-1OK
+  attempt 3: set-spnOK -> request-service-tokenOK -> read-proof-1OK
+
+{
+  "path": "path_1",
+  "attempts_total": 3,
+  "attempts_succeeded": 3,
+  "three_of_three": true,
+  "attempts": [
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "set-spn",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "request-service-token",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-1",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 1
+    },
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "set-spn",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "request-service-token",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-1",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 2
+    },
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "set-spn",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "request-service-token",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-1",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 3
+    }
+  ]
+}

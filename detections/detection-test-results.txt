@@ -1,0 +1,77 @@
+=== detections/fixtures/benign-group-admin.jsonl ===
+{
+  "source_file": "detections/fixtures/benign-group-admin.jsonl",
+  "detections": [
+    {
+      "rule": "spn_abuse_chain",
+      "alert": false,
+      "evidence": []
+    },
+    {
+      "rule": "group_selfadd_chain",
+      "alert": false,
+      "evidence": []
+    }
+  ]
+}
+
+=== detections/fixtures/benign-spn-rotation.jsonl ===
+{
+  "source_file": "detections/fixtures/benign-spn-rotation.jsonl",
+  "detections": [
+    {
+      "rule": "spn_abuse_chain",
+      "alert": false,
+      "evidence": []
+    },
+    {
+      "rule": "group_selfadd_chain",
+      "alert": false,
+      "evidence": []
+    }
+  ]
+}
+
+=== detections/fixtures/positive-group-selfadd.jsonl ===
+{
+  "source_file": "detections/fixtures/positive-group-selfadd.jsonl",
+  "detections": [
+    {
+      "rule": "spn_abuse_chain",
+      "alert": false,
+      "evidence": []
+    },
+    {
+      "rule": "group_selfadd_chain",
+      "alert": true,
+      "actor": "candidate-b6214a7d",
+      "evidence": [
+        "add-group-member",
+        "read-proof-2"
+      ]
+    }
+  ]
+}
+
+=== detections/fixtures/positive-spn-abuse.jsonl ===
+{
+  "source_file": "detections/fixtures/positive-spn-abuse.jsonl",
+  "detections": [
+    {
+      "rule": "spn_abuse_chain",
+      "alert": true,
+      "actor": "candidate-b6214a7d",
+      "evidence": [
+        "set-spn",
+        "request-service-token",
+        "read-proof-1"
+      ]
+    },
+    {
+      "rule": "group_selfadd_chain",
+      "alert": false,
+      "evidence": []
+    }
+  ]
+}
+

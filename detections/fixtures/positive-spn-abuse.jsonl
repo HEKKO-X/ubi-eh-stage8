@@ -1,0 +1,3 @@
+{"sequence": 1, "time": "2026-08-21T10:00:00Z", "action": "set-spn", "actor": "candidate-b6214a7d", "target": "set-spn", "result": "success"}
+{"sequence": 2, "time": "2026-08-21T10:00:05Z", "action": "request-service-token", "actor": "candidate-b6214a7d", "target": "request-service-token", "result": "success"}
+{"sequence": 3, "time": "2026-08-21T10:00:10Z", "action": "read-proof-1", "actor": "candidate-b6214a7d", "target": "read-proof-1", "result": "success"}

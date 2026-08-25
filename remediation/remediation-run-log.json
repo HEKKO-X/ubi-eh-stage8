@@ -1,0 +1,41 @@
+
+=== REMEDIATION TEST SUMMARY ===
+  path_1: PASS
+    baseline attack worked (pre-fix): True
+    remediation applied: True
+    blocked correctly (post-fix): True
+    health still green: True
+  path_2: PASS
+    baseline attack worked (pre-fix): True
+    remediation applied: True
+    blocked correctly (post-fix): True
+    health still green: True
+
+{
+  "path_1": {
+    "path": "path_1",
+    "baseline_attack_worked": true,
+    "remediation_applied": true,
+    "post_remediation_blocked_correctly": true,
+    "post_remediation_first_result": {
+      "ok": false,
+      "operation": "set-spn",
+      "exit_code": 2
+    },
+    "health_after_remediation": true,
+    "pass": true
+  },
+  "path_2": {
+    "path": "path_2",
+    "baseline_attack_worked": true,
+    "remediation_applied": true,
+    "post_remediation_blocked_correctly": true,
+    "post_remediation_first_result": {
+      "ok": false,
+      "operation": "add-group-member",
+      "exit_code": 2
+    },
+    "health_after_remediation": true,
+    "pass": true
+  }
+}

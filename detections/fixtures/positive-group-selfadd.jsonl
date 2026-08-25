@@ -1,0 +1,2 @@
+{"sequence": 1, "time": "2026-08-21T11:00:00Z", "action": "add-group-member", "actor": "candidate-b6214a7d", "target": "add-group-member", "result": "success"}
+{"sequence": 2, "time": "2026-08-21T11:00:05Z", "action": "read-proof-2", "actor": "candidate-b6214a7d", "target": "read-proof-2", "result": "success"}

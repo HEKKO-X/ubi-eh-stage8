@@ -1,0 +1,10 @@
+{
+  "domain_dn": "DC=northstar,DC=local",
+  "domain_netbios": "NORTHSTAR",
+  "candidate_user": "candidate-v1",
+  "candidate_password": "replace-private-value",
+  "service_user": "svc-archive-v1",
+  "service_password": "replace-private-value",
+  "path_1_flag": "replace-private-value",
+  "path_2_flag": "replace-private-value"
+}

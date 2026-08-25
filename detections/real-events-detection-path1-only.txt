@@ -1,0 +1,20 @@
+{
+  "source_file": "ad-range/events.jsonl",
+  "detections": [
+    {
+      "rule": "spn_abuse_chain",
+      "alert": true,
+      "actor": "candidate-b6214a7d",
+      "evidence": [
+        "set-spn",
+        "request-service-token",
+        "read-proof-1"
+      ]
+    },
+    {
+      "rule": "group_selfadd_chain",
+      "alert": false,
+      "evidence": []
+    }
+  ]
+}

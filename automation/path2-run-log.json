@@ -1,0 +1,160 @@
+
+=== PATH 2 SUMMARY: PASS (3/3 clean runs) ===
+  attempt 1: add-group-memberOK -> read-proof-2OK
+  attempt 2: add-group-memberOK -> read-proof-2OK
+  attempt 3: add-group-memberOK -> read-proof-2OK
+
+{
+  "path": "path_2",
+  "attempts_total": 3,
+  "attempts_succeeded": 3,
+  "three_of_three": true,
+  "attempts": [
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "add-group-member",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-2",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 1
+    },
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "add-group-member",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-2",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 2
+    },
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "add-group-member",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-2",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 3
+    }
+  ]
+}
+
+=== PATH 2 SUMMARY: PASS (3/3 clean runs) ===
+  attempt 1: add-group-memberOK -> read-proof-2OK
+  attempt 2: add-group-memberOK -> read-proof-2OK
+  attempt 3: add-group-memberOK -> read-proof-2OK
+
+{
+  "path": "path_2",
+  "attempts_total": 3,
+  "attempts_succeeded": 3,
+  "three_of_three": true,
+  "attempts": [
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "add-group-member",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-2",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 1
+    },
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "add-group-member",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-2",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 2
+    },
+    {
+      "attempt_ok": true,
+      "sequence_results": [
+        {
+          "ok": true,
+          "operation": "add-group-member",
+          "exit_code": 0
+        },
+        {
+          "ok": true,
+          "operation": "read-proof-2",
+          "proof": "[REDACTED]",
+          "exit_code": 0
+        }
+      ],
+      "cleanup_result": {
+        "ok": true,
+        "operation": "cleanup",
+        "exit_code": 0
+      },
+      "attempt_number": 3
+    }
+  ]
+}
