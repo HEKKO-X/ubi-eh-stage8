@@ -91,6 +91,12 @@ Two rules: `spn_abuse_chain` and `group_selfadd_chain`. Both alert correctly on 
 - `events.jsonl` is reset on every `build --force` call; it only reflects the most recent build cycle, not cumulative history across separate script runs. Detection was verified against isolated single-path runs to produce a clean real-data trace for each rule.
 - The optional full GOAD-Light VM route was not used — this submission follows the controlling B2 portable pack route, per the Stage 8 release update dated 2026-08-19 stating no hardware bonus applies and the portable route carries the same rubric.
 
+
+## Repository
+
+Full version-controlled history: https://github.com/HEKKO-X/ubi-eh-stage8
+Frozen commit for this submission: 78397ffb756a77b7e5340bb6cc90a962503165e2 (initial), latest commit see git log.
+
 ## Credential handling
 
 Real secrets and proof values are held only in `candidate.json` and local run logs under `automation/` and `remediation/`, kept in this local, non-public evidence folder. They are not reproduced in this README or in `decision-log.md`. See `credential-handling-record.md` for full disposal record.

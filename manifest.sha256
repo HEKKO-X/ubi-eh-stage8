@@ -3,6 +3,7 @@
 d622504e42983316e93a847dc061f75e2a93bbe6d8aa71a9d23aa40eaa0507aa  ./ad-range/source-records.json
 b3ed67deb29b03888c545e1825f210c2fb8cb057fc913b57340413afdaaeb977  ./ad-range/state.json
 fd63fbe096a54f6bc38b472e9383b7e087c219ff65ca3c6678bc5105c110dc4f  ./assessment-manifest.json
+8168d0059abe16a91853768433f62d45de5adc11c4d558f2af5578f0c8cc1d30  ./attack-paths.json
 ba2084399760db1ee4c55206dd7f0391a7722b6045fb1629be67f49f3c11fa08  ./automation/path1_automation.py
 3849b1946364dbf57e02334c6a48bddcaeaa5ceec656157176ab027f64db4338  ./automation/path1-run-log.json
 f11860b881276bf663e61bf0df376d769f838da869d31a358519552662470bed  ./automation/path2_automation.py
@@ -11,6 +12,7 @@ f11860b881276bf663e61bf0df376d769f838da869d31a358519552662470bed  ./automation/p
 3e56b463cb92b5dd9e8c10ff901af3ba2c6a88643503c0721a83a74ae624a4f6  ./automation/range_client.py
 9c7407048d0a19a86dbc1378e038730008d186d13dda27b18ad40b404a1f0390  ./candidate.json
 1796b407f35d21dda9cc456b6cb8a13e4948c7433f12b7ebf964b6b34124a13c  ./continuity-record.md
+51c91903779a86af106968ded6332ce6570c30ba019f00d0e5f712b9e05f5231  ./credential-handling.md
 3807e63bbced204c62a23b814e588946f0b815a44628635dbbc5ee27da485c9f  ./detections/detection-test-results.txt
 532d59b4a5abe72d5e1655f3910f58657f67bc0da57d28edd84ebb40e5483b28  ./detections/detect.py
 7b69e5596338d526bbeda240f0378db9de25e73d897dc4f7f231720fb09b4eaf  ./detections/fixtures/benign-group-admin.jsonl
@@ -41,7 +43,7 @@ c41a8917d3e312550987d8f53b32d29d5e7a827e015de91c9a2adf29ff567426  ./evidence/com
 847e2df9975d572177b01c58ac16d275ba3e96241d31c304b6d6b33be163aa1e  ./evidence/common/technical-assessment-contract.md
 423817c773cf322c84f045c5c486f00681f41ac101de9fdafb74a1019d568bb3  ./evidence/decision-log.md
 4df1c3124a288f5c5e4f57e5fbad7a2bda2c50b5aad77591beea9d29b9a8d5d5  ./evidence/detection-hashes.txt
-e2d59bdba0a3b77109ef16e246a0072b21efb49123964e32383d874a5046a176  ./evidence/documentation-hashes.txt
+45579d5763e67c9add29155602696c9b6d00267b4bdd37f5baef2aa306f947a7  ./evidence/documentation-hashes.txt
 3b93f9ddb5b1bf7c09ba46b14035ebe548633053e35c012642e39c232e29d52f  ./evidence/enumeration-hashes.txt
 bddeb4c4cef87fe163cb951491cc4b8b2b95270f47360de1737331d8bd2f3462  ./evidence-index.csv
 14675d92233ef171f56c54176e378480f5e1774dc78c0c9ed152ea08ba363aee  ./evidence/lab-source/Apply-Variant.ps1
@@ -56,8 +58,9 @@ e294ae98298af230564a6664603a9caa53c71556b803ee21ba95dc2d29ac50c6  ./evidence/pre
 9dccac3ff6da511f42598e06628e65c71a470947f2e957ff74a0ca1de2f5a41e  ./evidence/START-HERE.md
 b1f9063cc748780fd14add4cd3677393585c7601e0a68717eff06176516faaff  ./.gitignore
 1e0b4cc4ddeb18ac604d07dec978a5cb442a249132c706a7b5d8ea2e52ca18b9  ./integrity-attestation.md
-d4f013820d4e707a126131d44f6ae03f7c4e25ac5cf2f4179e8a8a285067e2ba  ./README.md
+3c5a9747012d4a6a7fa7eaeb2647bd17668d6c54a4f3663cf2beaa627bcd22e1  ./README.md
 7a168c9c80bec219a494e05cb854336a0dd5d8189c645a25009b177f9b2fe66a  ./remediation/remediation-run-log.json
 b0b5962bc66061b81eab3040755be687e78001a640f50de55e9ca7fedde5c93e  ./remediation/remediation_test.py
 953e4daab5a3fc4c15d10d45b3fed5ecacc7074187558d0db570e48259bac3ce  ./tests/run-all-log.txt
 081baac51636fefaa8c6975977437358d05a47befdfd61528549ce5ebf1c03c2  ./tests/run_all.py
+d15b952b110322712679cc1c23959a12e1750a1d3b3eb4b64a8e430e99d2282d  ./windows-events/NOT-APPLICABLE.md

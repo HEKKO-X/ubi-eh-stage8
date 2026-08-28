@@ -1,0 +1,45 @@
+{
+  "marker": "UBI-A8-D426CF231FB6",
+  "candidate_binding": "64a5d0f18dd28c4ed27a",
+  "foothold_user": "candidate-b6214a7d",
+  "paths": [
+    {
+      "path_id": "path_1",
+      "category": "credential_abuse_plus_acl",
+      "description": "Foothold has write access to the SPN attribute of a service account. Setting an SPN makes the account Kerberoastable; requesting its service ticket and cracking the resulting credential offline yields the account's identity, which has read access to the first proof object.",
+      "edges": [
+        {"source": "candidate-b6214a7d", "edge": "WriteSPN", "target": "svc-archive-b6214a7d"},
+        {"source": "svc-archive-b6214a7d", "edge": "ReadProof", "target": "archive-primary"}
+      ],
+      "target_proof_object": "archive-primary",
+      "proof_value_location": "candidate.json (path_1_proof) - not reproduced here, see credential-handling.md",
+      "automation_script": "automation/path1_automation.py",
+      "automation_result": "3 of 3 clean runs succeeded - see automation/path1-run-log.json",
+      "remediation_script": "remediation/remediation_test.py (remediate-path-1)",
+      "remediation_result": "Sequence now fails at set-spn - see remediation/remediation-run-log.json",
+      "detection_rule": "detections/detect.py - spn_abuse_chain"
+    },
+    {
+      "path_id": "path_2",
+      "category": "pure_acl_abuse",
+      "description": "Foothold has full control (GenericAll) over an empty group. Full control over a group allows adding oneself as a member; group membership grants inherited read access to the second proof object.",
+      "edges": [
+        {"source": "candidate-b6214a7d", "edge": "GenericAll", "target": "Archive Operators"},
+        {"source": "Archive Operators", "edge": "ReadProof", "target": "archive-secondary"}
+      ],
+      "target_proof_object": "archive-secondary",
+      "proof_value_location": "candidate.json (path_2_proof) - not reproduced here, see credential-handling.md",
+      "automation_script": "automation/path2_automation.py",
+      "automation_result": "3 of 3 clean runs succeeded - see automation/path2-run-log.json",
+      "remediation_script": "remediation/remediation_test.py (remediate-path-2)",
+      "remediation_result": "Sequence now fails at add-group-member - see remediation/remediation-run-log.json",
+      "detection_rule": "detections/detect.py - group_selfadd_chain"
+    }
+  ],
+  "rejected_edges": [
+    {"edge": "GenericAll", "source": "candidate-b6214a7d", "target": "deleted-group", "reason": "marked_stale"},
+    {"edge": "MemberOf", "source": "svc-archive-b6214a7d", "target": "Service Accounts", "reason": "target_object_missing"},
+    {"edge": "AdminTo", "source": "Directory Administrators", "target": "FILE01", "reason": "source_unreachable"}
+  ],
+  "reference": "Full edge classification: enumeration/discovery-output.json"
+}
