@@ -1,4 +1,4 @@
-363d09481a1cc50de42c8a358ca3e032a3d8a4104bbc44c83d32de318bd53c01  ./ad-range/events.jsonl
+eb144ac9568f894f92facdfd24d917c166eb22cd04ef6956c0efdaf7d93c4977  ./ad-range/events.jsonl
 6b74e7ef9c97bb5a1473d3ba93f911196b9187e18061a600e1f1ab3a337d9511  ./ad-range/manifest.json
 d622504e42983316e93a847dc061f75e2a93bbe6d8aa71a9d23aa40eaa0507aa  ./ad-range/source-records.json
 b3ed67deb29b03888c545e1825f210c2fb8cb057fc913b57340413afdaaeb977  ./ad-range/state.json
@@ -43,7 +43,7 @@ c41a8917d3e312550987d8f53b32d29d5e7a827e015de91c9a2adf29ff567426  ./evidence/com
 847e2df9975d572177b01c58ac16d275ba3e96241d31c304b6d6b33be163aa1e  ./evidence/common/technical-assessment-contract.md
 423817c773cf322c84f045c5c486f00681f41ac101de9fdafb74a1019d568bb3  ./evidence/decision-log.md
 4df1c3124a288f5c5e4f57e5fbad7a2bda2c50b5aad77591beea9d29b9a8d5d5  ./evidence/detection-hashes.txt
-45579d5763e67c9add29155602696c9b6d00267b4bdd37f5baef2aa306f947a7  ./evidence/documentation-hashes.txt
+5617da6b5ab8205a0acf018e73c91dc9a4abf8504478c9b79dd321774b9a7666  ./evidence/documentation-hashes.txt
 3b93f9ddb5b1bf7c09ba46b14035ebe548633053e35c012642e39c232e29d52f  ./evidence/enumeration-hashes.txt
 bddeb4c4cef87fe163cb951491cc4b8b2b95270f47360de1737331d8bd2f3462  ./evidence-index.csv
 14675d92233ef171f56c54176e378480f5e1774dc78c0c9ed152ea08ba363aee  ./evidence/lab-source/Apply-Variant.ps1
@@ -58,9 +58,11 @@ e294ae98298af230564a6664603a9caa53c71556b803ee21ba95dc2d29ac50c6  ./evidence/pre
 9dccac3ff6da511f42598e06628e65c71a470947f2e957ff74a0ca1de2f5a41e  ./evidence/START-HERE.md
 b1f9063cc748780fd14add4cd3677393585c7601e0a68717eff06176516faaff  ./.gitignore
 1e0b4cc4ddeb18ac604d07dec978a5cb442a249132c706a7b5d8ea2e52ca18b9  ./integrity-attestation.md
-3c5a9747012d4a6a7fa7eaeb2647bd17668d6c54a4f3663cf2beaa627bcd22e1  ./README.md
+d54f9a8a6edd835c6ea058e571753842ababe271dd700d3d4ad13cb32616798d  ./README.md
+fc01e0566754ca48a77085a20169f3017dd4a4dac0b28f8890557601434d1160  ./redact_run.sh
 7a168c9c80bec219a494e05cb854336a0dd5d8189c645a25009b177f9b2fe66a  ./remediation/remediation-run-log.json
 b0b5962bc66061b81eab3040755be687e78001a640f50de55e9ca7fedde5c93e  ./remediation/remediation_test.py
 953e4daab5a3fc4c15d10d45b3fed5ecacc7074187558d0db570e48259bac3ce  ./tests/run-all-log.txt
 081baac51636fefaa8c6975977437358d05a47befdfd61528549ce5ebf1c03c2  ./tests/run_all.py
+6b3ea9775f515a1783c9c6151ed9cbb379b9b8dc43ddda72a48ff7fc4b15bfc3  ./video-url
 d15b952b110322712679cc1c23959a12e1750a1d3b3eb4b64a8e430e99d2282d  ./windows-events/NOT-APPLICABLE.md

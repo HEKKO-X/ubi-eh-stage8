@@ -1,3 +1,52 @@
+# Own the Forest — Active Directory Attack Path Automation
+
+A self-contained project simulating a small company's Active Directory network, where I independently discovered two distinct privilege-escalation paths to full domain control, automated both with reproducible Python tooling, wrote detection rules that catch the attacks in progress, and remediated both vulnerabilities end-to-end.
+
+Completed as the final advanced project of the Ubuntu Bridge Initiative Cybersecurity Internship (Ethical Hacking track). Independently assessed and scored **84/100** by programme staff.
+
+## What this demonstrates
+
+- **Graph-based attack path discovery** — dynamic enumeration that classifies every relation in a directory graph, correctly distinguishing real privilege chains from decoys (planted stale edges, dangling references, unreachable sources)
+- **Exploit automation** — Python tooling that reliably reproduces two independent attacks from a clean state, each verified 3/3 times against real target values
+- **Detection engineering** — custom rules that alert on the attack pattern while correctly staying silent on plausible legitimate activity
+- **Remediation with proof** — before/after testing showing each vulnerability genuinely closed, with system health confirmed unaffected
+- **Real engineering discipline** — git history hygiene (caught and fixed an accidental secret commit), honest documentation of a real bug found in my own code, and transparent disclosure of every known limitation
+
+## Results at a glance
+
+| | Path 1 (credential abuse + ACL) | Path 2 (pure ACL abuse) |
+|---|---|---|
+| Automation reliability | 3/3 clean runs | 3/3 clean runs |
+| Detection rule | ✅ Alerts on attack, silent on benign controls | ✅ Alerts on attack, silent on benign controls |
+| Remediation | ✅ Attack fails at intended step post-fix | ✅ Attack fails at intended step post-fix |
+| System health after fix | ✅ Green | ✅ Green |
+
+## Attack path overview
+
+```mermaid
+graph LR
+    A[Foothold user] -->|WriteSPN| B[Service account]
+    B -->|Kerberoast + ReadProof| C[(Proof 1)]
+    A -->|GenericAll| D[Group: Archive Operators]
+    D -->|ReadProof| E[(Proof 2)]
+```
+
+Two genuinely different mechanisms: Path 1 combines an ACL misconfiguration with credential abuse (Kerberoasting); Path 2 is pure access-control abuse via group membership inheritance — no credentials involved at all.
+
+## Tooling
+
+| Component | Purpose |
+|---|---|
+| `enumeration/discover.py` | Dynamic graph discovery and edge classification, zero hardcoded values |
+| `automation/path1_automation.py`, `path2_automation.py` | Independent, reliable exploit automation |
+| `detections/detect.py` | Custom detection rules with positive/benign fixture validation |
+| `remediation/remediation_test.py` | Before/after remediation proof |
+| `tests/run_all.py` | Single-command unattended test runner |
+
+Full technical documentation, exact reproduction steps, and evidence trail below.
+
+---
+
 # Stage 8 — Own the Forest — README
 
 ## Candidate
